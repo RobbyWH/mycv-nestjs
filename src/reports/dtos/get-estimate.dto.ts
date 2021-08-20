@@ -21,6 +21,7 @@ export class GetEstimateDto {
   @Max(2050)
   year: number;
 
+  @Transform(({ value }) => parseInt(value))
   @IsNumber()
   @Min(0)
   @Max(1000000)
